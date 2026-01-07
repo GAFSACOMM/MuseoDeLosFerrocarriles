@@ -11,7 +11,7 @@
     line-height: 1.6;
     color: #333;
     scroll-behavior: smooth;
-    background-color: #fdfdfd;
+    background-color: #d7eaf8;
     font-size: 18px; /* Texto global más grande */
   }
   
@@ -25,7 +25,7 @@
   
   /* Header */
   header {
-    background: #012340;
+    background: #607b8e;
     color: #fff;
     padding: 20px 0;
     position: sticky;
@@ -157,10 +157,24 @@
     padding: 0 15px 20px;
   }
   
+  .overlay-box {
+    /* Sets the background to white with 50% opacity */
+    background-color: transparent; 
+    padding: 20px;
+    border: none;
+    text-align: justify;
+}
+  .transparent-box {
+    background-color: transparent;
+    /* Makes the whole div transparent */
+    opacity: 1; 
+    padding: 20px;
+    text-align: justify;
+}
 
   /* Footer mejorado */
   footer {
-    background: #020617;
+    background: #607b8e;
     color: #e5e7eb;
     margin-top: 60px;
     font-size: 0.95rem;
@@ -237,7 +251,7 @@
   }
 
   .footer-bottom {
-    border-top: 1px solid rgba(148, 163, 184, 0.5);
+    border-top: 1px solid rgba(215, 234, 248);
     padding: 12px 0 18px;
   }
 
@@ -334,12 +348,12 @@
     align-items: center;
     z-index: 9999;
     opacity: 1;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.2s ease-out;
   }
   
   .preloader-logo {
     width: 100px;
-    animation: spin 5s linear infinite;
+    animation: spin 2s linear infinite;
   }
   
   @keyframes spin {
@@ -354,7 +368,7 @@
   
   @keyframes pulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.05); background-color: #ffcc70; }
+    50% { transform: scale(1.05); background-color: #a57722; }
     100% { transform: scale(1); }
   }
   
@@ -383,16 +397,79 @@
     }
   }
   /* Estilos para la sección de salas */
+  /* Estilos para el carrusel de salas */
+  .salas-carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .salas-carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .salas-carousel .sala-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .salas-carousel .sala-item.active {
+    opacity: 1;
+  }
+  
   .salas-grid {
     display: grid;
     grid-template-areas:
-      'Mision Vision'
       'vestibulo sala1'
       'sala2 sala3'
       'sala4 sala3'
       'sala5 sala6';
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
+  }
+  
+  /* Estilos para la sección de misión y visión con background */
+  #mision-vision {
+    background-image: url('../Img/dibujo locomotora_1.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  #mision-vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(215, 234, 248, 0.85);
+    z-index: 0;
+  }
+  
+  #mision-vision > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Grid centrado para misión y visión */
+  #mision-vision .salas-grid {
+    grid-template-areas: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    justify-content: center;
+    gap: 40px;
   }
   
   .sala-item {
@@ -404,6 +481,143 @@
     background-position: center;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  
+  /* Estilos específicos para misión y visión - cuadrados transparentes */
+  #mision-vision .sala-item {
+    aspect-ratio: 1 / 1;
+    height: 80%;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(96, 123, 142, 0.3);
+    cursor: pointer;
+  }
+  
+  /* Estilos para tarjetas flip */
+  .flip-card {
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .flip-card-front {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .flip-card-back {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: rotateY(180deg);
+  }
+  
+  /* Estilos para el frente de las salas de exhibición */
+  .sala-front {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .sala-front::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    border-radius: 12px;
+  }
+  
+  .sala-front h3,
+  .sala-front .click-hint {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .sala-front h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .click-hint {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el reverso de las salas de exhibición */
+  .sala-back {
+    background-color: rgba(255, 255, 255, 0.98);
+    overflow-y: auto;
+  }
+  
+  .sala-back .sala-overlay {
+    position: static;
+    background: transparent;
+    color: #333;
+    backdrop-filter: none;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sala-back .sala-overlay h3 {
+    color: #607b8e;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .sala-back .sala-overlay p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Aplicar imágenes de fondo a las salas */
+  .vestibulo .sala-front { background-image: url('../img/videomapping.webp'); }
+  .sala1 .sala-front { background-image: url('../img/simulador.webp'); }
+  .sala2 .sala-front { background-image: url('../img/evolucion.webp'); }
+  .sala3 .sala-front { background-image: url('../img/rutas.webp'); }
+  .sala4 .sala-front { background-image: url('../img/yucatan.webp'); }
+  
+  /* Deshabilitar hover en tarjetas flip para evitar conflicto */
+  .flip-card:hover {
+    transform: none;
   }
   
   .sala-item:hover {
@@ -421,6 +635,30 @@
     backdrop-filter: blur(2px);
   }
   
+  /* Estilo transparente para sala-overlay en misión y visión */
+  #mision-vision .sala-overlay {
+    position: static;
+    background: transparent;
+    color: #333;
+    backdrop-filter: none;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #mision-vision .sala-overlay h2 {
+    color: #607b8e;
+    margin-bottom: 15px;
+  }
+  
+  #mision-vision .sala-overlay p {
+    text-align: justify !important;
+    color: #333;
+    line-height: 1.6;
+  }
+  
   .sala-overlay h3 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -433,8 +671,6 @@
   }
   
   /* Áreas y fondos específicos */
-  .sala-item.Mision     { grid-area: Mision; background-image: url('../img/mt1.PNG'); }
-  .sala-item.Vision     { grid-area: Vision; background-image: url('../img/mt2.PNG'); }
   .sala-item.vestibulo { grid-area: vestibulo; height: 260px; background-image: url('../img/videomapping.webp'); }
   .sala-item.sala1     { grid-area: sala1; background-image: url('../img/simulador.webp'); }
   .sala-item.sala2     { grid-area: sala2; background-image: url('../img/evolucion.webp'); }
@@ -450,6 +686,17 @@
     .sala-item {
       height: 220px !important;
     }
+    
+    /* Responsive para carrusel de salas */
+    .salas-carousel {
+      height: 450px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .salas-carousel {
+      height: 350px;
+    }
   }
   
   /* Utilidades de tamaño de texto */
@@ -459,3 +706,168 @@
   /* Opcional: para bloques completos */
   .smaller-block { font-size: 0.9em; }
   
+  /*CARRUSEL DE IMÁGENES*/
+  .carousel-container {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 700px;
+  }
+
+  .carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    background-color: #f5f5f5;
+  }
+
+  .carousel-image.active {
+    opacity: 1;
+  }
+
+  /* Controles del carrusel */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(1, 35, 64, 0.7);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .carousel-control:hover {
+    background-color: rgba(191, 169, 128, 0.9);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .carousel-control.prev {
+    left: 20px;
+  }
+
+  .carousel-control.next {
+    right: 20px;
+  }
+
+  /* Indicadores del carrusel */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+  }
+
+  .indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .indicator:hover {
+    background-color: rgba(191, 169, 128, 0.8);
+  }
+
+  .indicator.active {
+    background-color: #BFA980;
+    transform: scale(1.2);
+  }
+
+  /* Responsive para el carrusel */
+  @media (max-width: 768px) {
+    .carousel-slide {
+      height: 400px;
+    }
+
+    .carousel-control {
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+
+    .carousel-control.prev {
+      left: 10px;
+    }
+
+    .carousel-control.next {
+      right: 10px;
+    }
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-slide {
+      height: 300px;
+    }
+
+    .carousel-control {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  }
+.gallery {
+  --size: 100px;
+  display: grid;
+  grid-template-columns: repeat(6, var(--size));
+  grid-auto-rows: var(--size);
+  margin-bottom: var(--size);
+  place-items: start center;
+  gap: 5px;
+  
+  &:has(:hover) img:not(:hover),
+  &:has(:focus) img:not(:focus){
+    filter: brightness(0.5) contrast(0.5);
+  }
+
+  & img {
+    object-fit: cover;
+    width: calc(var(--size) * 2);
+    height: calc(var(--size) * 2);
+    clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
+    transition: clip-path 0.25s, filter 0.75s;
+    grid-column: auto / span 2;
+    border-radius: 5px;
+
+    &:nth-child(5n - 1) { 
+      grid-column: 2 / span 2 
+    }
+
+    &:hover,
+    &:focus {
+      clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+      z-index: 1;
+      transition: clip-path 0.25s, filter 0.25s;
+    }
+    
+    &:focus {
+      outline: 1px dashed black;
+      outline-offset: -5px;
+    }
+  }
+}

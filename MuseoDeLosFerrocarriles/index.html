@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo de Ferrocarriles</title>
@@ -9,13 +9,14 @@
 </head>
 <body>
     <header>
+
         <div class="container header-container">
         <img src="assets/Img/Logs-05 4.png" height="80px" width="285px" alt="Museo de los Ferrocarriles">
           <!-- <h1 class="logo">Museo<span>De Los Ferrocarriles</span></h1> -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#mision-vision">Conocenos</a></li>
                     <li><a href="#salas">Exhibiciones</a></li>
                     <li><a href="#horarios">Horarios</a></li>
                     <li><a href="#ubicacion">Ubicación</a></li>
@@ -26,7 +27,7 @@
     </header>
     <!--Preloader-->
     <div class="preloader">
-        <img src="assets/Img/ferrocarril logo-02.png" alt="Cargando..." class="preloader-logo">   
+        <img src="assets/Icons/Rueda.svg" alt="Cargando..." class="preloader-logo">   
     </div>
 
     <section id="inicio" class="hero">
@@ -39,11 +40,10 @@
     </section>
 
 
-    <!-- ======= Sobre Nosotros ======= -->
-<section id="sobre-nosotros" class="py-5 bg-light" data-aos="fade-up">
+<!-- <section id="sobre-nosotros" class="py-5 bg-light" data-aos="fade-up" >
     <div class="container"><br><br>   
       <h2 class="section-title text-center">Conocenos</h2>
-      <h4 class="text-center lead mb-5 px-md-5">
+      <!-- <h4 class="text-center lead mb-5 px-md-5">
         El Museo de los Ferrocarriles ofrece una experiencia inmersiva que muestra la evolución del transporte ferroviario, con locomotoras históricas, vagones restaurados y exhibiciones interactivas para todas las edades.
       </h4><br>
       <div class="row justify-content-center">
@@ -56,55 +56,51 @@
         </div>
       </div>
     </div>
-  </section>
-   
-  <!-- ======= Misión y Visión ======= -->
-  <!-- <section id="mision-vision" class="py-5" data-aos="fade-up">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h2 class="card-title text-success fw-bold text-center">Misión</h2>
-              <h4 class="card-text mt-3" style="text-align: justify;">
-                Preservar y dar a conocer la historia y el patrimonio ferroviario, destacando su impacto en el desarrollo social, económico y cultural. A través de la conservación de piezas históricas y exposiciones interactivas, buscamos generar conciencia sobre la importancia del ferrocarril en el pasado, presente y futuro, acercando este legado a la comunidad y fomentando su valoración.
-              </h4><br><br>
-            </div>
-          </div>
-        </div>
-   
-        <div class="col-md-6">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h2 class="card-title text-success fw-bold text-center">Visión</h2>
-              <h4 class="card-text mt-3" style="text-align: justify;">
-                Ser un referente nacional e internacional en la conservación y difusión del patrimonio ferroviario, promoviendo el conocimiento y la apreciación de la historia del ferrocarril. Aspiramos a ser un espacio revolucionario e innovador, que inspire a nuevas generaciones a valorar el impacto del transporte ferroviario en el desarrollo social, económico y tecnológico, contribuyendo a la preservación de su legado para el futuro.
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section> -->
-  <!-- ======= Misión y Visión ======= -->
-  <section id="mision-vision" class="py-5" data-aos="fade-up">
+   
+  <section id="mision-vision" class="py-5" data-aos="fade-up" >
+  <h2 class="section-title text-center">Conocenos</h2>
   <div class="container">        
     <div class="salas-grid">
-      <div class="sala-item Mision">
-        <div class="sala-overlay">
-          <h2 style="text-align: center;">Misión</h2>
-          <p style="text-align: center;">
-                Preservar y dar a conocer la historia y el patrimonio ferroviario, destacando su impacto en el desarrollo social, económico y cultural. A través de la conservación de piezas históricas y exposiciones interactivas, buscamos generar conciencia sobre la importancia del ferrocarril en el pasado, presente y futuro, acercando este legado a la comunidad y fomentando su valoración.
-          </p>
+      <!-- Tarjeta Misión con efecto flip -->
+      <div class="sala-item flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente de la tarjeta -->
+          <div class="flip-card-front">
+            <img src="assets/Img/imisión.png" alt="Misión" style="display: block; margin: 0 auto 20px; width: 30%;">
+            <h2 style="text-align: center; color: #607b8e;">Misión</h2>
+            <p style="text-align: center; font-size: 0.9rem; margin-top: 10px; color: #666;">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso de la tarjeta -->
+          <div class="flip-card-back">
+            <div class="sala-overlay">
+              <h2 style="text-align: center;">Misión</h2>
+              <p style="text-align: justify;">
+                    Preservar y dar a conocer la historia y el patrimonio ferroviario, destacando su impacto en el desarrollo social, económico y cultural. A través de la conservación de piezas históricas y exposiciones interactivas, buscamos generar conciencia sobre la importancia del ferrocarril en el pasado, presente y futuro, acercando este legado a la comunidad y fomentando su valoración.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="sala-item Vision">
-        <div class="sala-overlay">
-          <h2 style="text-align: center;">Visión</h2>
-          <p style="text-align: center;">
-                Ser un referente nacional e internacional en la conservación y difusión del patrimonio ferroviario, promoviendo el conocimiento y la apreciación de la historia del ferrocarril. Aspiramos a ser un espacio revolucionario e innovador, que inspire a nuevas generaciones a valorar el impacto del transporte ferroviario en el desarrollo social, económico y tecnológico, contribuyendo a la preservación de su legado para el futuro.
-          </p>
+      <!-- Tarjeta Visión con efecto flip -->
+      <!-- Tarjeta Visión con efecto flip -->
+      <div class="sala-item flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente de la tarjeta -->
+          <div class="flip-card-front">
+            <img src="assets/Img/ivisión.png" alt="Visión" style="display: block; margin: 0 auto 20px; width: 30%;">
+            <h2 style="text-align: center; color: #607b8e;">Visión</h2>
+            <p style="text-align: center; font-size: 0.9rem; margin-top: 10px; color: #666;">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso de la tarjeta -->
+          <div class="flip-card-back">
+            <div class="sala-overlay">
+              <h2 style="text-align: center;">Visión</h2>
+              <p style="text-align: justify;">
+                    Ser un referente nacional e internacional en la conservación y difusión del patrimonio ferroviario, promoviendo el conocimiento y la apreciación de la historia del ferrocarril. Aspiramos a ser un espacio revolucionario e innovador, que inspire a nuevas generaciones a valorar el impacto del transporte ferroviario en el desarrollo social, económico y tecnológico, contribuyendo a la preservación de su legado para el futuro.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -112,54 +108,111 @@
 </section>
 
 <!-- Sección de Salas del Museo -->
-<!-- Sección de Salas del Museo estilo mural asimétrico -->
+<!-- Sección de Salas del Museo estilo carrusel -->
 <section id="salas" class="section salas" data-aos="fade-up">
   <div class="container">
     <h2 class="section-title">Actividades Interactivas </h2>
-    <div class="salas-grid">
- 
-      <div class="sala-item vestibulo">
-        <div class="sala-overlay">
-          <br><br>
-          <h3>Sala de Videomapping 360°</h3>
-          <br>
-          <p>Un espacio inmersivo diseñado para ofrecer a los visitantes una experiencia visual única, en la que las proyecciones envolventes transforman el entorno y transportan al espectador a diferentes épocas, lugares y realidades.
-          <br>Gracias a la tecnología de videomapping, las imágenes se proyectan sobre las paredes, generando una sensación de inmersión total.
-          </p>
+    
+    <!-- Carrusel de Salas -->
+    <div class="salas-carousel-container">
+      <div class="salas-carousel">
+      <div class="sala-item vestibulo flip-card active" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente con imagen de fondo -->
+          <div class="flip-card-front sala-front">
+            <h3>Sala de Videomapping 360°</h3>
+            <p class="click-hint">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso con información -->
+          <div class="flip-card-back sala-back">
+            <div class="sala-overlay">
+              <h3>Sala de Videomapping 360°</h3>
+              <p>Un espacio inmersivo diseñado para ofrecer a los visitantes una experiencia visual única, en la que las proyecciones envolventes transforman el entorno y transportan al espectador a diferentes épocas, lugares y realidades.<br><br>Gracias a la tecnología de videomapping, las imágenes se proyectan sobre las paredes, generando una sensación de inmersión total.</p>
+            </div>
+          </div>
         </div>
       </div>
  
-      <div class="sala-item sala1">
-        <div class="sala-overlay">
-          <br><br>
-          <h3>Simulador de Viaje en Tren</h3><br>
-          <p>El Simulador de Viaje en Tren es una experiencia inmersiva que transporta a los visitantes a diferentes épocas y escenarios ferroviarios. 
-          <br>Mediante proyecciones envolventes y sonido 3D, los asistentes vivirán la sensación real de viajar en un tren con movimiento, mientras descubren siete historias distintas, cada una proyectada en días específicos.</p>
+      <div class="sala-item sala1 flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente con imagen de fondo -->
+          <div class="flip-card-front sala-front">
+            <h3>Simulador de Viaje en Tren</h3>
+            <p class="click-hint">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso con información -->
+          <div class="flip-card-back sala-back">
+            <div class="sala-overlay">
+              <h3>Simulador de Viaje en Tren</h3>
+              <p>El Simulador de Viaje en Tren es una experiencia inmersiva que transporta a los visitantes a diferentes épocas y escenarios ferroviarios.<br><br>Mediante proyecciones envolventes y sonido 3D, los asistentes vivirán la sensación real de viajar en un tren con movimiento, mientras descubren siete historias distintas, cada una proyectada en días específicos.</p>
+            </div>
+          </div>
         </div>
       </div>
  
-      <div class="sala-item sala2">
-        <div class="sala-overlay">
-          <br><br>
-          <h3>Evolución del Ferrocarril</h3><br>
-          <p>Esta sala muestra el desarrollo del ferrocarril desde sus inicios hasta la actualidad. A través de maquetas, pantallas interactivas y proyecciones, los visitantes pueden conocer los avances y su impacto en la sociedad.</p>
+      <div class="sala-item sala2 flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente con imagen de fondo -->
+          <div class="flip-card-front sala-front">
+            <h3>Evolución del Ferrocarril</h3>
+            <p class="click-hint">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso con información -->
+          <div class="flip-card-back sala-back">
+            <div class="sala-overlay">
+              <h3>Evolución del Ferrocarril</h3>
+              <p>Esta sala muestra el desarrollo del ferrocarril desde sus inicios hasta la actualidad. A través de maquetas, pantallas interactivas y proyecciones, los visitantes pueden conocer los avances y su impacto en la sociedad.</p>
+            </div>
+          </div>
         </div>
       </div>
  
-      <div class="sala-item sala3">
-        <div class="sala-overlay">
-          <br><br>
-          <h3>Las Primeras Rutas del Ferrocarril</h3><br>
-          <p>Explora las primeras rutas ferroviarias y su llegada a México. Con mapas interactivos y material audiovisual, los visitantes pueden recorrer los trayectos que transformaron el transporte.</p>
+      <div class="sala-item sala3 flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente con imagen de fondo -->
+          <div class="flip-card-front sala-front">
+            <h3>Las Primeras Rutas del Ferrocarril</h3>
+            <p class="click-hint">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso con información -->
+          <div class="flip-card-back sala-back">
+            <div class="sala-overlay">
+              <h3>Las Primeras Rutas del Ferrocarril</h3>
+              <p>Explora las primeras rutas ferroviarias y su llegada a México. Con mapas interactivos y material audiovisual, los visitantes pueden recorrer los trayectos que transformaron el transporte.</p>
+            </div>
+          </div>
         </div>
       </div>
  
-      <div class="sala-item sala4">
-        <div class="sala-overlay">
-          <br><br>
-          <h3>Ferrocarril en Yucatán</h3><br>
-          <p>Esta sala está dedicada a la historia del ferrocarril en Yucatán, destacando su importancia en el comercio, la migración y el desarrollo económico de la región.</p>
+      <div class="sala-item sala4 flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <!-- Frente con imagen de fondo -->
+          <div class="flip-card-front sala-front">
+            <h3>Ferrocarril en Yucatán</h3>
+            <p class="click-hint">Haz clic para ver más</p>
+          </div>
+          <!-- Reverso con información -->
+          <div class="flip-card-back sala-back">
+            <div class="sala-overlay">
+              <h3>Ferrocarril en Yucatán</h3>
+              <p>Esta sala está dedicada a la historia del ferrocarril en Yucatán, destacando su importancia en el comercio, la migración y el desarrollo económico de la región.</p>
+            </div>
+          </div>
         </div>
+      </div>
+      </div>
+      
+      <!-- Controles del carrusel -->
+      <button class="carousel-control prev" onclick="moveSalasCarousel(-1)">&#10094;</button>
+      <button class="carousel-control next" onclick="moveSalasCarousel(1)">&#10095;</button>
+      
+      <!-- Indicadores del carrusel -->
+      <div class="carousel-indicators">
+        <span class="indicator active" onclick="currentSala(0)"></span>
+        <span class="indicator" onclick="currentSala(1)"></span>
+        <span class="indicator" onclick="currentSala(2)"></span>
+        <span class="indicator" onclick="currentSala(3)"></span>
+        <span class="indicator" onclick="currentSala(4)"></span>
       </div>
     </div>
   </div>
@@ -178,9 +231,42 @@
              <br>
              <div class="section-title text-center ">
               <br>
-              <img src="assets/Img/image00099_15_11zon.webp"  height="700px" width="1000px" alt="Museo de los Ferrocarriles">
+              
              </div>
         </div>
+    </section>
+
+
+    <section> 
+      <article class="gallery">
+        <img src="https://assets.codepen.io/1506195/unsplash-music-0.avif" alt="guitar player at concert" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-1.avif" alt="duo singing" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-2.avif" alt="crowd cheering" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-3.avif" alt="singer performing" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-4.avif" alt="singer fistbumping crowd" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-5.avif" alt="man with a guitar singing" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-6.avif" alt="crowd looking at a lighted stage" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-7.avif" alt="woman singing on stage" />
+      </article>
+      <br>
+      <!-- Carrusel -->
+              <div class="carousel-container">
+                <div class="carousel-slide">
+                  <img src="assets/Img/evolucion.webp" alt="Museo de los Ferrocarriles 1" class="carousel-image active" >
+                  <img src="assets/Img/IMG_0499_19_11zon.jpg" alt="Museo de los Ferrocarriles 2" class="carousel-image">
+                  <img src="assets/Img/IMG_8724_26_11zon.jpg" alt="Museo de los Ferrocarriles 3" class="carousel-image">
+                </div>
+
+                <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
+                
+                <div class="carousel-indicators">
+                  <span class="indicator active" onclick="currentSlide(0)"></span>
+                  <span class="indicator" onclick="currentSlide(1)"></span>
+                  <span class="indicator" onclick="currentSlide(2)"></span>
+                </div>
+              </div>
+      <br>
     </section>
 
     <section id="horarios" class="section schedule">
@@ -198,8 +284,10 @@
           <h4>Teléfono: (999) 68 94 364 Ext. 53202</h4>
           <h4>Correo electrónico: museoferrocarril@gafsacomm.com</h4>
           <!-- <p>Redes Sociales:</p>
-          <p>Facebook: </p>
+          <p>Facebook: </p> 
           <p>Instagram: </p> -->
+          <img src="assets/Icons/Icono FB.svg" alt="Facebook" height="30px" width="30px">
+          <img src="assets/Icons/Icono Instagram.svg" alt="Instagram" height="30px" width="30px">
           <h4>Suscríbete a nuestras redes y recibe las últimas noticias y promociones.</h4>
       </div>
   </section>
@@ -322,6 +410,120 @@
         }, 500); // Transición de desvanecimiento
     }, 2000); // Ahora el preloader dura 3 segundos antes de empezar a desvanecerse
 });
+    </script>
+
+    <!-- Script para el carrusel de imágenes -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalImages = images.length;
+
+        // Cambiar automáticamente cada 5 segundos
+        let autoSlide = setInterval(() => moveCarousel(1), 4000);
+
+        function moveCarousel(direction) {
+            // Remover clase active de la imagen actual
+            images[currentIndex].classList.remove('active');
+            indicators[currentIndex].classList.remove('active');
+
+            // Calcular nuevo índice
+            currentIndex += direction;
+
+            // Reiniciar el índice si es necesario
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+
+            // Agregar clase active a la nueva imagen
+            images[currentIndex].classList.add('active');
+            indicators[currentIndex].classList.add('active');
+
+            // Reiniciar el temporizador automático
+            clearInterval(autoSlide);
+            autoSlide = setInterval(() => moveCarousel(1), 4000);
+        }
+
+        function currentSlide(index) {
+            // Remover clase active de la imagen actual
+            images[currentIndex].classList.remove('active');
+            indicators[currentIndex].classList.remove('active');
+
+            // Establecer nuevo índice
+            currentIndex = index;
+
+            // Agregar clase active a la nueva imagen
+            images[currentIndex].classList.add('active');
+            indicators[currentIndex].classList.add('active');
+
+            // Reiniciar el temporizador automático
+            clearInterval(autoSlide);
+            autoSlide = setInterval(() => moveCarousel(1), 4000);
+        }
+    </script>
+
+    <!-- Script para el carrusel de salas -->
+    <script>
+        let currentSalaIndex = 0;
+        const salas = document.querySelectorAll('.salas-carousel .sala-item');
+        const salasIndicators = document.querySelectorAll('#salas .indicator');
+        const totalSalas = salas.length;
+
+        // Cambiar automáticamente cada 6 segundos
+        let autoSalaSlide = setInterval(() => moveSalasCarousel(1), 6000);
+
+        function moveSalasCarousel(direction) {
+            // Remover clase flipped si está volteada
+            if (salas[currentSalaIndex].classList.contains('flipped')) {
+                salas[currentSalaIndex].classList.remove('flipped');
+            }
+            
+            // Remover clase active de la sala actual
+            salas[currentSalaIndex].classList.remove('active');
+            salasIndicators[currentSalaIndex].classList.remove('active');
+
+            // Calcular nuevo índice
+            currentSalaIndex += direction;
+
+            // Reiniciar el índice si es necesario
+            if (currentSalaIndex >= totalSalas) {
+                currentSalaIndex = 0;
+            } else if (currentSalaIndex < 0) {
+                currentSalaIndex = totalSalas - 1;
+            }
+
+            // Agregar clase active a la nueva sala
+            salas[currentSalaIndex].classList.add('active');
+            salasIndicators[currentSalaIndex].classList.add('active');
+
+            // Reiniciar el temporizador automático
+            clearInterval(autoSalaSlide);
+            autoSalaSlide = setInterval(() => moveSalasCarousel(1), 6000);
+        }
+
+        function currentSala(index) {
+            // Remover clase flipped si está volteada
+            if (salas[currentSalaIndex].classList.contains('flipped')) {
+                salas[currentSalaIndex].classList.remove('flipped');
+            }
+            
+            // Remover clase active de la sala actual
+            salas[currentSalaIndex].classList.remove('active');
+            salasIndicators[currentSalaIndex].classList.remove('active');
+
+            // Establecer nuevo índice
+            currentSalaIndex = index;
+
+            // Agregar clase active a la nueva sala
+            salas[currentSalaIndex].classList.add('active');
+            salasIndicators[currentSalaIndex].classList.add('active');
+
+            // Reiniciar el temporizador automático
+            clearInterval(autoSalaSlide);
+            autoSalaSlide = setInterval(() => moveSalasCarousel(1), 6000);
+        }
     </script>
     
 </body>
