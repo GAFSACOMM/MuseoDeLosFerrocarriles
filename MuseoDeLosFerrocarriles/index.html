@@ -7,28 +7,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
-<body>
-    <header>
 
-        <div class="container header-container">
-        <img src="assets/Img/Logs-05 4.png" height="80px" width="285px" alt="Museo de los Ferrocarriles">
-          <!-- <h1 class="logo">Museo<span>De Los Ferrocarriles</span></h1> -->
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#mision-vision">Conocenos</a></li>
-                    <li><a href="#salas">Exhibiciones</a></li>
-                    <li><a href="#horarios">Horarios</a></li>
-                    <li><a href="#ubicacion">Ubicación</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">&#9776;</div>
-        </div>
-    </header>
-    <!--Preloader-->
-    <div class="preloader">
-        <img src="assets/Icons/Rueda.svg" alt="Cargando..." class="preloader-logo">   
+<!--Preloader-->
+<div class="preloader">
+    <img src="assets/Icons/Rueda.svg" alt="Cargando..." class="preloader-logo">   
+</div>
+
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo span">
+        <img src="assets/Img/LogoMF.png" height="70%" width="70%" alt="Museo de los Ferrocarriles" >
+      </div>
+      <div class="spacer">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">INICIO </a></li>
+                <li><a href="#mision-vision">CONOCENOS</a></li> 
+                <li><a href="#salas">EXHIBICIONES</a></li>
+                <li><a href="#horarios">HORARIOS</a></li>
+                <li><a href="#ubicacion">UBICACIÓN</a></li>
+            </ul>
+        </nav>
+      </div>
     </div>
+  </header>
+    <div class="intro" style="padding-left: 1%; max-height: fit-content;">
+      <div class="intro" style="width: fit-content; height: auto;">
+        <h2>¡Viaja con nosotros sobre <br>rieles en el tiempo!</h2>
+        </div>
+    </div>
+
+  <section> 
+      <!-- Carrusel Heeader -->
+      <div class="carousel-container" w>
+        <div class="carousel-slide">
+          <img src="assets/Img/evolucion.webp" alt="Museo de los Ferrocarriles 1" class="carousel-image active" >
+          <img src="assets/Img/IMG_0499_19_11zon.jpg" alt="Museo de los Ferrocarriles 2" class="carousel-image">
+          <img src="assets/Img/IMG_8724_26_11zon.jpg" alt="Museo de los Ferrocarriles 3" class="carousel-image">
+        </div>
+        <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
+        
+        <div class="carousel-indicators">
+          <span class="indicator active" onclick="currentSlide(0)"></span>
+          <span class="indicator" onclick="currentSlide(1)"></span>
+          <span class="indicator" onclick="currentSlide(2)"></span>
+        </div>
+      </div>
+      <br>
+    </section>
+
 
     <section id="inicio" class="hero">
         <div class="hero-content">
@@ -39,25 +68,6 @@
         </div>
     </section>
 
-
-<!-- <section id="sobre-nosotros" class="py-5 bg-light" data-aos="fade-up" >
-    <div class="container"><br><br>   
-      <h2 class="section-title text-center">Conocenos</h2>
-      <!-- <h4 class="text-center lead mb-5 px-md-5">
-        El Museo de los Ferrocarriles ofrece una experiencia inmersiva que muestra la evolución del transporte ferroviario, con locomotoras históricas, vagones restaurados y exhibiciones interactivas para todas las edades.
-      </h4><br>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <h4 class="text-center lead mb-5 px-md-5">
-            El Museo de los Ferrocarriles nació con la misión de preservar y compartir la historia ferroviaria de nuestra región. Desde sus inicios, el ferrocarril ha sido un símbolo de progreso, conectando pueblos y facilitando el desarrollo económico.
-          </h4><br><br><br>
-          <h1 class="text-center">¡Te invitamos a viajar en el tiempo de una manera única y extraordinaria a través de locomotoras históricas, vagones restaurados y exposiciones interactivas!</h1>
-      <br><br>
-        </div>
-      </div>
-    </div>
-  </section> -->
-   
   <section id="mision-vision" class="py-5" data-aos="fade-up" >
   <h2 class="section-title text-center">Conocenos</h2>
   <div class="container">        
@@ -237,37 +247,7 @@
     </section>
 
 
-    <section> 
-      <article class="gallery">
-        <img src="https://assets.codepen.io/1506195/unsplash-music-0.avif" alt="guitar player at concert" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-1.avif" alt="duo singing" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-2.avif" alt="crowd cheering" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-3.avif" alt="singer performing" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-4.avif" alt="singer fistbumping crowd" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-5.avif" alt="man with a guitar singing" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-6.avif" alt="crowd looking at a lighted stage" />
-        <img src="https://assets.codepen.io/1506195/unsplash-music-7.avif" alt="woman singing on stage" />
-      </article>
-      <br>
-      <!-- Carrusel -->
-              <div class="carousel-container">
-                <div class="carousel-slide">
-                  <img src="assets/Img/evolucion.webp" alt="Museo de los Ferrocarriles 1" class="carousel-image active" >
-                  <img src="assets/Img/IMG_0499_19_11zon.jpg" alt="Museo de los Ferrocarriles 2" class="carousel-image">
-                  <img src="assets/Img/IMG_8724_26_11zon.jpg" alt="Museo de los Ferrocarriles 3" class="carousel-image">
-                </div>
 
-                <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
-                <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
-                
-                <div class="carousel-indicators">
-                  <span class="indicator active" onclick="currentSlide(0)"></span>
-                  <span class="indicator" onclick="currentSlide(1)"></span>
-                  <span class="indicator" onclick="currentSlide(2)"></span>
-                </div>
-              </div>
-      <br>
-    </section>
 
     <section id="horarios" class="section schedule">
         <div class="container">
